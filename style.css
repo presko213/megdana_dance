@@ -2,11 +2,11 @@
 body {
     margin: 0;
     font-family: sans-serif;
-    background-color: #f5f9ff;
-    color: #1e9dcc;
+    background-color: #f9f9f9;
+    color: #111;
 }
 nav {
-    background-color: #005baf;
+    background-color: #003c7e;
     color: white;
     padding: 10px 20px;
     display: flex;
@@ -17,35 +17,35 @@ nav ul {
     list-style: none;
     display: flex;
     gap: 15px;
+    padding: 0;
 }
 nav a {
     color: white;
     text-decoration: none;
 }
-.hero {
-    background: url('https://via.placeholder.com/1200x500?text=Добре+дошли+в+Мегданъ') no-repeat center center;
-    background-size: cover;
-    text-align: center;
-    color: white;
-    padding: 120px 20px;
+nav a.active {
+    border-bottom: 2px solid white;
 }
-.hero h1 {
-    font-size: 3em;
-    margin: 0;
+.logo {
+    font-weight: bold;
 }
-.hero .btn {
-    background-color: #005baf;
-    color: white;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 5px;
-    margin-top: 15px;
-    display: inline-block;
+main {
+    display: flex;
 }
-section {
+.sidebar {
+    width: 80px;
+    background-color: white;
+    border-right: 1px solid #ccc;
+}
+.sidebar img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+.content {
+    flex: 1;
     padding: 40px 20px;
     max-width: 1000px;
-    margin: auto;
 }
 .gallery {
     display: flex;
@@ -60,26 +60,35 @@ form {
     display: flex;
     flex-direction: column;
     gap: 10px;
+    max-width: 400px;
 }
-input, textarea {
+input, textarea, select {
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
 }
 button {
-    background-color: #005baf;
+    background-color: #003c7e;
     color: white;
     border: none;
     padding: 10px;
     border-radius: 4px;
 }
 footer {
-    background-color: #002f5d;
+    background-color: #002d5d;
     color: white;
     text-align: center;
     padding: 20px;
 }
-
+.btn {
+    background-color: #003c7e;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 20px;
+    border-radius: 5px;
+}
 .choreographers {
     display: flex;
     gap: 20px;
@@ -93,14 +102,4 @@ footer {
 .profile img {
     width: 100%;
     border-radius: 10px;
-}
-#signup form select {
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-}
-#importance {
-    background: url('https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Bulgarian_embroidery_motif.svg/1280px-Bulgarian_embroidery_motif.svg.png') repeat-x center;
-    background-size: contain;
-    padding-top: 60px;
 }
